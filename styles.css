@@ -1,0 +1,115 @@
+header {
+  background-image: linear-gradient(
+    125deg,
+    #023e8a,
+    #035c89,
+    #006d77,
+    #1a759f,
+    #2a9d8f,
+    #56cfe1,
+    #a0dcdc
+  );
+  background-size: 400% 400%;
+  animation: bganimation 14s infinite;
+  color: #f1f3f5;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  padding: 2rem 3rem;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 6rem 2rem;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: slideInDown 2s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease 2s forwards;
+}
+
+.hero-button {
+  padding: 0.75rem 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #2b3035;
+  border: none;
+  border-radius: 25px;
+  transition: transform 1s ease, background-color 1s ease;
+  animation: slideInUp 2s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.hero-button:hover {
+  background-color: #ffffff;
+  color: #2b3035;
+  transition: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+  .hero-button {
+    font-size: 1rem;
+  }
+}
